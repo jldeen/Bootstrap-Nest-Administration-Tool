@@ -2,11 +2,17 @@
 
 error_reporting(E_ERROR);
 
-include('../classes/dbconnect.php');
-include('../classes/nest.php');
-include('../nest.conf.php');
-include('../functions/convertKelvin.php');
-include('../functions/encrypt_decrypt.php');
+// include('../classes/dbconnect.php');
+// include('../classes/nest.php');
+// include('../nest.conf.php');
+// include('../functions/convertKelvin.php');
+// include('../functions/encrypt_decrypt.php');
+
+include('/opt/nest-bootstrap/includes/classes/dbconnect.php');
+include('/opt/nest-bootstrap/includes/classes/nest.php');
+include('/opt/nest-bootstrap/includes/nest.conf.php');
+include('/opt/nest-bootstrap/includes/functions/convertKelvin.php');
+include('/opt/nest-bootstrap/includes/functions/encrypt_decrypt.php');
 
 try {
   $db_connect = DBConnect::getConnection();
