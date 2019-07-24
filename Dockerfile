@@ -1,5 +1,5 @@
 FROM debian:jessie-slim
-LABEL MAINTAINER Guillaume Chenuet <guillaume@chenuet.fr>
+LABEL MAINTAINER Jessica Deen <jessica@jessicadeen.com>
 
 # Update base image & install packages
 RUN apt-get update && apt-get install -y \
