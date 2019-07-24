@@ -10,12 +10,59 @@ https://raw.githubusercontent.com/f0rkz/Bootstrap-Nest-Administration-Tool/maste
 
 *	Control panel to set temperatures and tweak settings
 
+General Prerequisites
+-------------
+* [Nest](https://nest.com) Account
+* [DarkSky](https://darksky.net/dev/register) API Key (It's Free)
+
+For Docker version:
+* [Docker](https://docs.docker.com/engine/installation/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+
+Docker Setup
+=============
+
+If you want to use this simple Nest bootstrap with Docker, please follow these steps:
+
+* Copy the `nest.conf.php_EXAMPLE` to `nest.conf.php` in the `includes` directory and fill it in with oyur configuration values:
+* *OPTIONAL - ONLY UPDATE IF NOT USING MYSQL IN DOCKER OR IF YOU WANT DIFFERENT CREDS; BE SURE TO MATCH THESE VARIABLES WITH ENV VARIABLES IN DOCKER-COMPOSE.YML*
+	* `DB_HOST` - mariadb
+    * `DB_USER` - nest_stats
+    * `DB_PASS` = n3st_st4ts
+    * `DB_NAME` = nest_stats
+* *STANDARD*
+	* `LATITUDE` - Latitude
+	* `LONGITUDE` - Longitude
+    * `DARK_API` - DarkSky API Key
+    * `ENCRYPTION_KEY` - openssl encryption key
+    * `DEFAULT_USER` - *optional* if you want a username displayed on front page of graph
+
+
+* _(Opt)_ Edit the docker-compose.yml file to specify your ENV variables and timezone.
+
+* Build Docker image:
+
+	```
+	docker-compose build
+	```
+
+* Run Project
+	```
+	docker-compose up -d
+	```
+* Do both build and run in one command:
+	```
+	docker-compose -f "docker-compose.yml" up -d --build
+
+
+CLASSIC INSTALL INSTRUCTIONS
+=============
+
 Prerequisite PHP Packages
 -------------
 *	php7-json
 
-INSTALL INSTRUCTIONS
-=============
+You can run this in a docker container
 
 Create a mysql database and give it a username and password.
 
