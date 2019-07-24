@@ -12,6 +12,7 @@ define('DB_NAME', 'nest_stats');
 
 // DARK_SKY_COORDS
 // Register for a free API key here: https://darksky.net/dev/register
+// LAT and LONG can be found here: https://www.latlong.net/
 define('LATITUDE', '34.052235');
 define('LONGITUDE', '-118.243683');
 define('DARK_API', 'DARKSKY_API_KEY_HERE');
