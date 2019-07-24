@@ -35,8 +35,8 @@ while ( $row = $users_statement->fetch())
 	$nest_username = $row['nest_username'];
 	$nest_password = $row['nest_password'];
 	$nest_password_decrypt = decrypt($nest_password, ENCRYPTION_KEY);
-	// $timestamp = date('Y-m-d H:i:s');
-	$timestamp = time();
+	$timestamp = date('Y-m-d H:i:s');
+	// $timestamp = time();
 
   try {
 	$nest = new Nest($nest_username, $nest_password_decrypt);

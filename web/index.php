@@ -18,8 +18,8 @@ include('../includes/common.php');
 
 $date = new DateTime();
     $timezone = $date->getTimezone()->getName();
-    // $timestamp = date('Y-m-d H:i:s');
-    $timestamp = time();
+    $timestamp = date('Y-m-d H:i:s');
+    // $timestamp = time();
 
     $user_lat = LATITUDE;
     $user_long = LONGITUDE;
@@ -408,8 +408,8 @@ if (isset($request['cmd']) && ($request['cmd'] == 'generate_graph' || $request['
 
 			while ($row = $data_statement->fetch())
 			{
-				$timestamp = $row['timestamp'];
-				// $timestamp = strtotime($row['timestamp']);
+				// $timestamp = $row['timestamp'];
+				$timestamp = strtotime($row['timestamp']);
 				$setpoint = $row['target'];
 				$temp = $row['current'];
 				$humidity = $row['humidity'];

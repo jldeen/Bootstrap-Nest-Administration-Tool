@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS `data` (
     `record_id` int(11) NOT NULL AUTO_INCREMENT,
     `device_serial_number` varchar(16) COLLATE utf8_unicode_ci NOT NULL,
-    -- `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    `timestamp` int(5) NOT NULL,
+    `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    -- `timestamp` int(5) NOT NULL,
     `user_id` int(11) NOT NULL,
     `heating` tinyint unsigned NOT NULL,
     `cooling` tinyint unsigned NOT NULL,
